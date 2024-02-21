@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="global.css">
+  <link rel="shortcut icon" href="assets/book-solid.svg" type="image/x-icon">
+  <title>Study</title>
+</head>
+<body>
+  <header>
+    <h2>Pomodoro</h2>
+    <h2>Lista de Tarefas</h2>
+  </header>
+
+  <main>
+    <aside class="left">
+      <header>
+        <h3>Dados da sessão</h3>
+        <img src="assets/stopwatch-solid.svg" alt="stopwatch icon">
+      </header>
+
+      <div class="infos">
+        <div class="currentTime info">
+          <h5>Modo atual:</h5>
+          <img src="assets/focus.svg" alt="focus time icon" id="currentInfo">
+        </div>
+        <div class="nextTime info">
+          <h5>Próximo modo:</h5>
+          <img src="assets/shortBreak.svg" alt="short break-time icon" id="nextInfo">
+        </div>
+      </div>
+
+      <div class="timer">
+        <div class="counter">
+          <span id="minutes">25</span>
+          :
+          <span id="seconds">00</span>
+        </div>
+        <div class="controls">
+          <img src="assets/rotate-right-solid.svg" alt="retry button icon" id="reset">
+          <img src="assets/play-solid.svg" alt="play button icon" id="start">
+        </div>
+      </div>
+    </aside>
+
+    <aside class="right">
+      <header>
+        <h3>Tarefas</h3>
+        <img src="assets/list-check-solid.svg" alt="list icon">
+      </header>
+      <img src="assets/more button.svg" alt="add task button icon" class="addTaskIcon" id="addTaskButton">
+      <div class="tasks">
+      </div>
+    </aside>
+  </main>
+
+  <div class="addTaskModal hidden">
+    <div class="container">
+      <img src="assets/xmark-solid.svg" alt="close button icon" id="closeModal">
+      <form>
+        <label for="nameTask">Nomeie a tarefa:</label>
+        <input type="text" name="name" id="nameTask">
+        <input type="submit" value="Salvar" id="saveTask">
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  user-select: none;
+}
+
+:root {
+  --backgroundColor: #292929;
+  --lightColor: #FFF;
+  --grayColor: #CECECE;
+}
+
+body {
+  background: var(--backgroundColor);
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  font-style: bold;
+  color: var(--lightColor);
+  margin-bottom: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+aside {
+  border-radius: 20px;
+  border: 1px solid var(--grayColor);
+  width: 48%;
+  height: 80vh;
+}
+
+aside header {
+  border-bottom: 1px solid var(--grayColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  color: var(--grayColor);
+}
+
+aside header img {
+  width: 40px;
+}
+
+.infos {
+  color: var(--grayColor);
+  font-size: 2rem;
+}
+
+.infos img {
+  scale: 120%;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.timer {
+  color: var(--lightColor);
+  font-size: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 10rem;
+}
+
+.counter span {
+  font-family: 'Kode Mono';
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  height: 5rem;
+}
+
+.controls img{
+  width: 3.5rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#retry {
+  width: 4rem;
+}
+
+.controls img:hover {
+  scale: 101%;
+  filter: brightness(115%);
+}
+
+.addTaskIcon {
+  position: absolute;
+  right: 4rem;
+  cursor: pointer;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+  color: #CECECE;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.task input {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  background: #CECECE;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.addTaskModal {
+  width: 100vw;
+  height: 100vh;
+  background: #292929d8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.addTaskModal .container {
+  width: 50%;
+  height: 80%;
+  background: #000000a9;
+  border-radius: 2rem;
+  border: 1px solid #cecece9f;
+  margin: 5% 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addTaskModal .container img {
+  width: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #cecece;
+  font-size: 2rem;
+  gap: 1rem;
+}
+
+.container form #nameTask {
+  border: 1px solid var(--grayColor);
+  border-radius: 1rem;
+  padding: .5rem;
+  background: #0000006b;
+  color: #FFF;
+}
+
+.container form #saveTask {
+  padding: 0 5.7rem;
+  border-radius: 1rem;
+  border: none;
+  background: #418b41;
+  color: #cecece;
+  font-size: 1.8rem;
+  cursor: pointer;
+}

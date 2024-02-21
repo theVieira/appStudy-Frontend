@@ -1,0 +1,18 @@
+{
+  "name": "controlstudiesfrontend",
+  "version": "1.0.0",
+  "description": "control my studies frontend app",
+  "main": "src/main.js",
+  "author": "Gabriel Guimaraes",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-packager ./ studyControls --plataform=linux --arch=x64 --out ../studyControlsAPP"
+  },
+  "dependencies": {
+    "@electron/packager": "^18.1.3",
+    "axios": "^1.6.7",
+    "electron": "^28.2.3"
+  }
+}
